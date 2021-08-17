@@ -1,0 +1,72 @@
+.formulario {
+    fieldset {
+        .campo {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 2rem;
+            input {
+                width: 30rem;
+                border: 1px solid $grisOscuro;
+                border-radius: 0.5rem;
+            }
+            select {
+                width: 30rem;
+                text-align: center;
+                border: 1px solid $grisOscuro;
+                border-radius: 0.5rem;
+            }
+            label {
+                font-weight: $black;
+            }
+            textarea {
+                width: 95rem;
+                max-width: 95rem;
+                min-width: 95rem;
+                height: 40rem;
+                max-height: 40rem;
+                min-height: 40rem;
+                @media (max-width: 1050px) {
+                    width: 80rem;
+                    max-width: 80rem;
+                    min-width: 80rem;
+                }
+                @include tablet {
+                    width: 45rem;
+                    max-width: 45rem;
+                    min-width: 45rem;
+                }
+                @include telefono {
+                    width: 35rem;
+                    max-width: 35rem;
+                    min-width: 35rem;
+                }
+            }
+        }
+        .forma-contacto {
+            .campo {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                label {
+                    width: fit-content;
+                    min-width: 7rem;
+                    margin-right: 1rem;
+                }
+                input {
+                    width: 1.5rem;
+                }
+            }
+        }
+        .boton-verde {
+            padding: 0.5rem 5rem;
+            background-color: $verde;
+            border: none;
+            border-style: none;
+            border-radius: 5px;
+            color: $blanco;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
